@@ -27,6 +27,7 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.text.TextUtils;
 
+import com.android.launcher3.LauncherAppState;
 import com.android.launcher3.LauncherFiles;
 import com.android.launcher3.R;
 import com.android.launcher3.Utilities;
@@ -85,6 +86,8 @@ public class SettingsHomescreen extends Activity
                 c.getPackageManager().setComponentEnabledSetting(cn, newValue,
                         PackageManager.DONT_KILL_APP);
             }
+        } else if (Utilities.KEY_SHOW_SEARCHBAR.equals(key)) {
+            LauncherAppState.getInstanceNoCreate().setNeedsRestart();
         }
     }
 

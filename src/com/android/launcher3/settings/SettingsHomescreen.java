@@ -149,6 +149,22 @@ public class SettingsHomescreen extends Activity
                     screen.removePreference(preference);
                 }
             }
+
+            Preference showWSGradient = findPreference(Utilities.SHOW_WORKSPACE_GRADIENT);
+            showWSGradient.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    Utilities.restart(getActivity());
+                    return true;
+                }
+            });
+
+            Preference showHSGradient = findPreference(Utilities.SHOW_HOTSEAT_GRADIENT);
+            showHSGradient.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    Utilities.restart(getActivity());
+                    return true;
+                }
+            });
         }
 
         @Override

@@ -31,6 +31,9 @@ import com.android.launcher3.config.FeatureFlags;
 import com.android.launcher3.uioverrides.plugins.PluginManagerWrapper;
 import com.android.launcher3.util.SecureSettingsObserver;
 
+import com.pixeldust.launcher.PixeldustLauncherCallbacks;
+import com.pixeldust.launcher.PixeldustUtils;
+
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragment;
 import androidx.preference.PreferenceFragment.OnPreferenceStartFragmentCallback;
@@ -49,6 +52,8 @@ public class SettingsActivity extends Activity
     public static final String EXTRA_SHOW_FRAGMENT_ARGS = ":settings:show_fragment_args";
     private static final int DELAY_HIGHLIGHT_DURATION_MILLIS = 600;
     public static final String SAVE_HIGHLIGHTED_KEY = "android:preference_highlighted";
+
+    public static final String MINUS_ONE_KEY = "pref_enable_minus_one";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -149,8 +154,11 @@ public class SettingsActivity extends Activity
          * will remove that preference from the list.
          */
         protected boolean initPreference(Preference preference) {
-            //switch (preference.getKey()) {
-            //}
+            switch (preference.getKey()) {
+                case MINUS_ONE_KEY:
+                    return PixeldustUtils.hasPackageInstalled(getActivity(),
+                            PixeldustLauncherCallbacks.SEARCH_PACKAGE);
+            }
             return true;
         }
 

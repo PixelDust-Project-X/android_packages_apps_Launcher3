@@ -23,7 +23,7 @@
     <string name="app_name">PixelDust Launcher</string>
 
     <!-- About info -->
-    <string name="about_pdx_title" translatable="false">@string/app_name</string>
+    <string name="about_pdx_title" translatable="false">@string/derived_app_name</string>
     <string name="about_pdx_summary">by PixelDust ROM</string>
     <string name="about_based_on_title">Based on AOSP Launcher3</string>
     <string name="about_based_on_summary">by the Android Open Source Project</string>

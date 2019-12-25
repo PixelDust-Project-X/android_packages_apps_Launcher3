@@ -13,12 +13,10 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources>
-
-    <string name="pref_show_google_now_summary" translatable="false">@string/msg_minus_one_on_left</string>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!-- QSB -->
-    <item type="id" name="g_icon" />
-    <item type="id" name="mic_icon" />
+    <attr name="gIcon" format="reference" />
+    <attr name="micIcon" format="reference" />
 
 </resources>

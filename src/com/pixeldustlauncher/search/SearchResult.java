@@ -13,18 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.pixeldust.launcher;
+package com.pixeldust.launcher.search;
 
-import com.android.launcher3.Launcher;
-import com.android.launcher3.LauncherCallbacks;
+import com.android.launcher3.allapps.search.AllAppsSearchBarController.Callbacks;
+import com.android.launcher3.util.ComponentKey;
 
-public class PixeldustLauncher extends Launcher {
+import java.util.ArrayList;
 
-    public PixeldustLauncher() {
-        setLauncherCallbacks(new PixeldustLauncherCallbacks(this));
-    }
+public class SearchResult {
 
-    public LauncherCallbacks getLauncherCallbacks() {
-        return mLauncherCallbacks;
+    public final ArrayList<ComponentKey> mApps = new ArrayList();
+    public final Callbacks mCallbacks;
+    public final String mQuery;
+
+    public SearchResult(String query, Callbacks callbacks) {
+        mQuery = query;
+        mCallbacks = callbacks;
     }
 }

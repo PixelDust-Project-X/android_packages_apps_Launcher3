@@ -135,7 +135,7 @@ public final class Utilities {
      */
     public static final int EDGE_NAV_BAR = 1 << 8;
 
-    static final String KEY_SHOW_SEARCHBAR = "pref_show_searchbar";
+    public static final String KEY_SHOW_SEARCHBAR = "pref_show_searchbar";
 
     /**
      * Indicates if the device has a debug build. Should only be used to store additional info or

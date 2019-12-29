@@ -18,6 +18,7 @@ package com.android.launcher3.views;
 import static com.android.launcher3.Utilities.EXTRA_WALLPAPER_FLAVOR;
 import static com.android.launcher3.Utilities.EXTRA_WALLPAPER_OFFSET;
 
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Rect;

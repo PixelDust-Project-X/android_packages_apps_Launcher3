@@ -8,6 +8,10 @@
         android:defaultValue="true"
         android:persistent="true"/>
 
+    <PreferenceCategory
+        android:key="home_general_category"
+        android:title="@string/home_general_title">
+
     <SwitchPreference
         android:defaultValue="true"
         android:key="pref_enable_minus_one"
@@ -33,5 +37,7 @@
         android:summary="@string/hotseat_gradient_summary"
         android:defaultValue="true"
         android:persistent="true"/>
+
+    </PreferenceCategory>
 
 </androidx.preference.PreferenceScreen>
